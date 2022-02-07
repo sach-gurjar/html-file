@@ -16,8 +16,14 @@ function fillstate()
         break;
     }
 }
-function removedd(dd){
+function filldd(arr){
   
-    for()
+    for(var i=0; i>country.selectedIndex;i++){
+     var opt=document.createElement("option")
+      opt.text=arr[i]
+      State.add(opt)
+    }
+}
+function removed(dd){
     
 }
