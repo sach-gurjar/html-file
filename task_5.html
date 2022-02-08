@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head><title>dropdown list:</title></head>
-    <h1>choose location:</h1><hr>
-    <body bgcolor="pink" size="200">
-        <div>country<select id="country">
+    <h1 align="center">choose location:</h1><hr>
+    <script src="task_5.js"></script>
+    <body bgcolor="pink" >
+        <div>Country<select id="country" onchange="fillstate()">
             <option>select</option>
             <option>india</option>
             <option>usa</option>
             <option>pakistan</option>
-        </select></div>
+        </select></div><br><br>
 
-    <div>state<select id="state">
+    <div>State<select id="state" onchange="fillcity()">
         <option>select</option>
-    </select></div>
+    </select></div><br><br>
     
-    <div>city<select id="city">
+    <div>City<select id="city">
             <option>select</option>
-        </select></div>
-     
+        </select></div><br><br>
+       
+    
     </body>
 </html>

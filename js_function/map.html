@@ -1,0 +1,24 @@
+<script>
+    function test(){
+        var a=["applelogo","googlelogo","microsoftlogo"]
+        var result= a.map((item,index)=>{
+
+            var opt=document.createElement("option")
+            opt.text=item
+            v.add(opt)
+            var t="folder/"+item+".png"
+            return t
+            
+        })
+        console.log(result)
+        result.map((item)=>{
+            im.innerHTML+=`<div><img src='${item}' width="200"></div>`
+        })
+    }
+    
+</script>
+<html>
+ <input type="button" value="click" onclick="test()" ><br><br>
+ <div><select id="v"></select></div>
+ <div id="im" ></div>
+</html>

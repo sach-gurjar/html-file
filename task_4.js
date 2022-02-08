@@ -67,7 +67,7 @@ function filldd(arr,arr2) {
     
 }
 function removedd(dd) {
-  for (var k = dd.list.options.length - 1; k >= 1; k--) {
+  for (var k = dd.options.length - 1; k >= 1; k--) {
     dd.remove(k);
   }
 }
