@@ -1,6 +1,6 @@
 function fillstate() {
   removedd(state);
-  switch (Country.selectedIndex) {
+  switch (country.selectedIndex) {
     case 1:
     var ins = ["madhya pradesh", "utter pradesh"];
     filldd(ins, state);
@@ -66,7 +66,7 @@ function filldd(arr, arr2) {
   }
 }
 function removedd(dd) {
-  for (var j = dd.state.option.length-1; j >= 1; j--) {
-    dd = remove(j);
+  for (var j = dd.options.length-1; j >= 1; j--) {
+    dd.remove(j);
   }
 }
