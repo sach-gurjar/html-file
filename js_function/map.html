@@ -1,24 +1,24 @@
-<script>
-    function test(){
-        var a=["applelogo","googlelogo","microsoftlogo"]
-        var result= a.map((item,index)=>{
+<!DOCTYPE html>
 
-            var opt=document.createElement("option")
-            opt.text=item
-            v.add(opt)
-            var t="folder/"+item+".png"
-            return t
-            
-        })
-        console.log(result)
-        result.map((item)=>{
-            im.innerHTML+=`<div><img src='${item}' width="200"></div>`
-        })
-    }
-    
-</script>
 <html>
- <input type="button" value="click" onclick="test()" ><br><br>
- <div><select id="v"></select></div>
- <div id="im" ></div>
+    <div><input type="button" value="click" onclick="show()"></div>
+    <div id="im"></div>
+    <div><select id="v"></select></div>
 </html>
+<script>
+    function show(){
+        var arr=["Skoda Rapid","Verna","Ciaz"]
+        var result=arr.map((item,index)=>{
+           var opt=document.createElement("option")
+           opt.text=item
+           v.add(opt)
+           var t=item+".png"
+           return t
+        })
+        //console.log(result)
+        result.map((item)=>{
+            im.innerHTML+=`<div><img src='image/${item}' width='200' ></div>`
+        })
+
+    }
+</script> 

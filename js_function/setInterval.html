@@ -1,0 +1,15 @@
+<script>
+    var count=0
+    function show(){
+        a.innerHTML=count
+        count+=1
+    }
+    function call(){
+        setInterval(show,1000)
+    }
+</script>
+<html>
+    <input type="button" value="click" onclick="call()"><br><br>
+    <div id="a"></div>
+    
+</html>

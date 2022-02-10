@@ -1,0 +1,22 @@
+<script>
+    var count=0
+    function show(){
+     if(count==10){
+      a.innerHTML="timeover"
+     }
+     else{
+         a.innerHTML = count
+         count += 1
+
+     }
+    }
+    function call(){
+        setInterval(show,1000)
+    }
+</script>
+
+<html>
+    <input type="button" value="click" onclick="call()">
+    <h1><div id="a">
+    </div></h1>
+</html>

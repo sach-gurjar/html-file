@@ -1,0 +1,21 @@
+<script>
+    var x=["Skoda Rapid","Verna","Ciaz"]
+    var i = 0
+    function show() {
+        
+        a.innerHTML= `<img src='image/${x[i]}.png' width="200">`
+        i+=1
+        if(i==3){
+         i=0
+        }
+    }
+    function call() {
+        setInterval(show, 1000)
+    }
+</script>
+
+<html>
+<input type="button" value="click" onclick="call()">
+<div id="a"></div>
+
+</html>
