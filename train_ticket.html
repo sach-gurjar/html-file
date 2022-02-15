@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<title>railway.com</title>
+<h1>Railway ticket</h1>
+<hr>
+
+<table align="center" border="1" cellspacing="0" cellpadding="5" width="400"><br><br>
+    <tr>
+        <th>choose location</th>
+        <th>
+            <span> <select id="state">
+                    <option>select</option>
+                    <option>gwalior</option>
+                    <option>noida</option>
+                    <option>agra</option>
+                </select><span> TO </span>
+                <select id="states">
+                    <option>select</option>
+                    <option>goa</option>
+                    <option>dehli</option>
+                    <option>dholpur</option>
+                    <option>datia</option>
+            </span>
+
+        </th>
+    </tr>
+    <tr>
+        <th>choose train name:</th>
+        <th>
+            <span> <select id="nam">
+                    <option>select</option>
+                    <option>Taj Express</option>
+                    <option>Bundelkhand express</option>
+                    <option>Dehli Express</option>
+                </select>
+            </span>
+
+        </th>
+    </tr>
+    <tr>
+        <th>distance:</th>
+        <th>
+            <span><input id="dis" type="text"></span>
+
+        </th>
+    </tr>
+</table><br><br>
+
+<div align="center">Press book ticket to book your ticket:<span> <input type="button" value="book ticket"
+            onclick="call()"></span></div>
+
+<div align="center" id="result"></div>
+
+</html>
+
+<script>
+    function call() {
+
+        var from = state.options[state.selectedIndex].text
+        var to = states.options[states.selectedIndex].text
+        var nm = nam.options[nam.selectedIndex].text
+        var di = dis.value
+
+
+        var w = "<table border='1' width='20%' cellspacing='' cellpadding='5'>"
+
+        w+= "<tr><th colspan='4'> <img src='folder/rail.png' width='200' </th></tr>"
+
+        var q = "<table border='1' width='20%' cellspacing='' cellpadding='5'>"
+        q += "<tr><th>From</th><th>" + from + "</th></tr>"
+        q += "<tr><th>To</th><th>" + to + "</th></tr>"
+        q += "<tr><th>Train name</th><th>" + nm + "</th></tr>"
+        q += "<tr><th>price</th><th>" + di*2 + "</th></tr></table>"
+
+
+        result.innerHTML = q
+
+    }
+
+</script>

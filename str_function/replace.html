@@ -1,0 +1,30 @@
+<!-- <html>
+<input type="button" value="click here" onclick="show()">
+
+</html>
+
+<script>
+    function show() {
+
+        var a = "dogs are the best".replace("dog",'cat') // also use (/dog/g,'car') for global
+
+        alert(a)
+    }
+
+</script> -->
+
+
+<html>
+<input type="button" value="click here" onclick="show()">
+
+</html>
+
+<script>
+    function show() {
+
+        var a = "dogs are the best".replace("dog", (i)=> i+"cat") // also use (/dog/g,'car') for global
+
+        alert(a)
+    }
+
+</script>

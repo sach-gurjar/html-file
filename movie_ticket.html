@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<title>book movies tickets </title>
+
+<body bgcolor="#EAF4FE"></body>
+
+<table >
+    <tr><td align="left"><span><img src="folder/bookmyshow.png" width="200" height="100"></span></td></tr>
+</table>
+<hr>
+
+<table align="center">
+    <td>
+        <span>
+            <h1>Book movies tickets</h1>
+        </span>
+    </td>
+</table>
+<center>
+    <br><br>
+    <div id="mimg"></div><br><br>
+    <input type="button" value="show movies posters" onclick="showposter()">
+</center>
+<br< /br>
+
+
+
+    <table align="center" border="1" cellspacing="0" cellpadding="5" width="400"><br><br>
+
+        <tr>
+            <td><b>movie name:</b></td>
+            <td>
+                <select id="moviename" onchange="call()">
+                    <option>select</option>
+                    <option value="300">Pushpa</option>
+                    <option value="320">Spider</option>
+                    <option value="250">Kgf</option>
+                    <option value="150">Thor</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td><b>price:</b></td>
+            <td><span id="pr"></span></td>
+        </tr>
+
+        <tr>
+            <td><b>quantity:</b></td>
+            <td><input type="number" id="qyt" value="1" onchange="call()"></td>
+        </tr>
+
+        <tr>
+            <td><b>Total price:</b></td>
+            <td><span id="tpr"></span></td>
+        </tr>
+
+        <tr>
+            <td><b>discount:</b></td>
+            <td><span id="dis">No discount applied :</span></td>
+        </tr>
+
+        <tr>
+            <td><b>Date:</b></td>
+            <td><input type="date" id="dat"  ></td>
+        </tr>
+
+        <tr>
+            <td><b>Time:</b></td>
+            <td>
+                <select id="ti" onchange="showposter()">
+                    <option>Choose movie time:</option>
+
+                    <option>4 PM</option>
+                    <option>6 PM</option>
+                    <option>8 PM</option>
+                    <option>10 PM</option>
+
+                </select>
+            </td>
+        </tr>
+
+
+    </table><br><br>
+
+    <div align="center"><b> your booking is almost ready :</b><input type="button" value="book now" onclick="printrr()">
+    </div>
+
+
+
+    <br><br>
+    <div align="center" id="tt"></div>
+
+</html>
+
+
+
+
+<script>
+    var x = ["Pushpa", "Spider", "Kgf", "Thor"]
+    var i = 0
+    function show() {
+
+        mimg.innerHTML = `<img src='folder/${x[i]}.png' width="400">`
+        i += 1
+        if (i == 4) {
+            i = 0
+        }
+    }
+
+    function showposter() {
+        setInterval(show, 1500)
+    }
+
+    function call() {
+        var h = moviename.options[moviename.selectedIndex].value
+        pr.innerHTML = h
+        tpr.innerHTML = h*qyt.value
+
+        if (qyt.value >= 5) {
+            rr = 5
+            dis.innerHTML = `${rr}`
+        }
+
+    }
+
+    function printrr() {
+
+        var mname = moviename.options[moviename.selectedIndex].text
+        var mprice = pr.innerHTML
+        var qt = qyt.value
+        var dt = new Date(dat.value)
+        var booking = ti.options[ti.selectedIndex].text
+        var net = tpr.innerHTML
+
+
+        var q = "<table border='1' width='50%' cellspacing='' cellpadding='5'>"
+        q += "<caption><b>your ticket</b></caption>"
+        q += "<tr><th><img src='folder/" + mimg + ".png' width='200'></th></tr>"
+        q += "<tr><th> movie " + mname + "</th></tr>"
+        q += "<tr><th>" + mprice + "</th></tr>"
+        q += "<tr><th>" + qt + "</th></tr>"
+        q += "<tr><th>" + dt+ "</th></tr>"
+        q += "<tr><th>" + booking + "</th></tr>"
+        q += "<tr><th>" + net + "</th></tr>"
+
+        tt.innerHTML = q
+
+    }
+</script>
