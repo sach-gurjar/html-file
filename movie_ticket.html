@@ -47,7 +47,7 @@
 
         <tr>
             <td><b>quantity:</b></td>
-            <td><input type="number" id="qyt" value="1" onchange="call()"></td>
+            <td><input type="number" id="qyt" value="1" onchange="call()" onkeyup="call()"></td>
         </tr>
 
         <tr>
@@ -89,7 +89,8 @@
 
 
     <br><br>
-    <div align="center" id="tt"></div>
+    <div align="center" id="tt"></div><br><br><br><br>
+    <br><br><br><br>
 
 </html>
 
@@ -121,6 +122,9 @@
             rr = 5
             dis.innerHTML = `${rr}`
         }
+        else{
+            dis.innerHTML=0
+        }
 
     }
 
@@ -136,13 +140,13 @@
 
         var q = "<table border='1' width='50%' cellspacing='' cellpadding='5'>"
         q += "<caption><b>your ticket</b></caption>"
-        q += "<tr><th><img src='folder/" + mimg + ".png' width='200'></th></tr>"
-        q += "<tr><th> movie " + mname + "</th></tr>"
-        q += "<tr><th>" + mprice + "</th></tr>"
-        q += "<tr><th>" + qt + "</th></tr>"
-        q += "<tr><th>" + dt+ "</th></tr>"
-        q += "<tr><th>" + booking + "</th></tr>"
-        q += "<tr><th>" + net + "</th></tr>"
+        q += "<tr><th colspan='2'><img src='folder/" + mname + ".png' width='200'></th></tr>"
+        q += "<tr><th>Movie name</th><th> " + mname + "</th></tr>"
+        q += "<tr><th>Movie price</th><th>" + mprice + "</th></tr>"
+        q += "<tr><th>Ticket qyt </th><th>" + qt + "</th></tr>"
+        q += "<tr><th>Date  </th><th>" + dt+ "</th></tr>"
+        q += "<tr><th> time </th><th>" + booking + "</th></tr>"
+        q += "<tr><th>net amount</th><th>" + net + "</th></tr>"
 
         tt.innerHTML = q
 
