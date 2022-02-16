@@ -1,7 +1,7 @@
 var x = ["Pushpa", "Spider", "Kgf", "Thor"];
 var i = 0;
 function show() {
-  mimg.innerHTML = `<img src='folder/${x[i]}.png' width="400">`;
+  mimg.innerHTML = `<img src='data/${x[i]}.png' width="700" height="300">`;
   i += 1;
   if (i == 4) {
     i = 0;
