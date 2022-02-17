@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html>
 <title>railway.com</title>
-<h1>Railway ticket</h1>
-<hr>
+<body>
+    <table width="100%" height="7%">
+        <tr>
+            <td align="left"><img src="data/irctc.png" width="200" height="80"></td>
+            <td align="right"><img src="data/irctclogo.png" width="700" height="80"></td>
+        </tr>
+    </table>
+    <hr>
+   <div align="center"><font  size="15">IRCTC</font></div>
+   <hr width="10%">
 
-<table align="center" border="1" cellspacing="0" cellpadding="5" width="400"><br><br>
+<table align="center" border="1" cellspacing="0" cellpadding="5" width="600"><br><br>
+    <tr><td colspan="2" align="center"><b>Ticket form</b></td></tr>
     <tr>
-        <th>choose location</th>
+        <td><b>choose location</b></td>
         <th>
-            <span> <select id="state">
+            <span> <select id="state" required>
                     <option>select</option>
-                    <option>gwalior</option>
-                    <option>noida</option>
-                    <option>agra</option>
+                    <option >gwalior</option>
+                    <option >agra</option>
+                    <option >dholpur</option>
                 </select><span> TO </span>
-                <select id="states">
+                <select id="states" required>
                     <option>select</option>
-                    <option>goa</option>
-                    <option>dehli</option>
-                    <option>dholpur</option>
-                    <option>datia</option>
+                    <option >datia</option>
+                    <option >mathura</option>
+                    <option >dehli</option>
+                    <option >jhansi</option>
             </span>
 
         </th>
     </tr>
     <tr>
-        <th>choose train name:</th>
+        <td><b>choose train name:</b></td>
         <th>
-            <span> <select id="nam">
+            <span> <select id="nam" required>
                     <option>select</option>
                     <option>Taj Express</option>
                     <option>Bundelkhand express</option>
@@ -38,19 +47,83 @@
         </th>
     </tr>
     <tr>
-        <th>distance:</th>
+        <td><b>Your name</b></td>
         <th>
-            <span><input id="dis" type="text"></span>
+            <span><input required id="nm" type="text"></span>
 
+        </th>
+    </tr>
+    <tr>
+        <td><b>Your age</b></td>
+        <th>
+            <span><input required id="ag" type="text"></span>
+    
+        </th>
+    </tr>
+    <tr>
+        <td><b>distance</b></td>
+        <th>
+            <span><input required type="text" id="dis"></span>
+    
         </th>
     </tr>
 </table><br><br>
 
+<table align="center" border="1" cellspacing="0" cellpadding="5" width="600">
+      <tr><td colspan="4" align="center"><b>Passengers information </b></td></tr>
+      <tr> 
+          <th>sr.no</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+      </tr>
+    <tr>
+        <th>1.</th>
+        <td><input required id="name1" type="text"></td>
+        <td><input required id="age1" type="text"></td>
+        <td>
+            <select id="age1" required>
+                <option>select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <th>2.</th>
+        <td><input required id="name2" type="text"></td>
+        <td><input required id="age2" type="text"></td>
+        <td>
+            <select required id="age2">
+                <option>select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <th>3.</th>
+        <td><input required id="name3" type="text"></td>
+        <td><input required id="age3" type="text"></td>
+        <td>
+            <select required id="age3">
+                <option>select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+        </td>
+    </tr>
+
+</table>
+
 <div align="center">Press book ticket to book your ticket:<span> <input type="button" value="book ticket"
             onclick="call()"></span></div>
 
-<div align="center" id="result"></div>
-
+<br><br><br><br><div align="center" id="result"></div>
+</body>
 </html>
 
 <script>
@@ -58,18 +131,17 @@
 
         var from = state.options[state.selectedIndex].text
         var to = states.options[states.selectedIndex].text
-        var nm = nam.options[nam.selectedIndex].text
+        var tnm = nam.options[nam.selectedIndex].text
         var di = dis.value
 
 
-        var w = "<table border='1' width='20%' cellspacing='' cellpadding='5'>"
+      
 
-        w+= "<tr><th colspan='4'> <img src='folder/rail.png' width='200' </th></tr>"
-
-        var q = "<table border='1' width='20%' cellspacing='' cellpadding='5'>"
+        var q = "<table border='1' width='600' cellspacing='0' cellpadding='5'>"
+          q+= "<th colspan='4'> <img src='data/irctc.png' width='200' </th>"
         q += "<tr><th>From</th><th>" + from + "</th></tr>"
         q += "<tr><th>To</th><th>" + to + "</th></tr>"
-        q += "<tr><th>Train name</th><th>" + nm + "</th></tr>"
+        q += "<tr><th>Train name</th><th>" + tnm + "</th></tr>"
         q += "<tr><th>price</th><th>" + di*2 + "</th></tr></table>"
 
 

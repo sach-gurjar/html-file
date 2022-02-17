@@ -35,10 +35,7 @@ function printrr() {
 
   var q = "<table border='1' width='50%' cellspacing='' cellpadding='5'>";
   q += "<caption><b>your ticket</b></caption>";
-  q +=
-    "<tr><th colspan='2'><img src='folder/" +
-    mname +
-    ".png' width='200'></th></tr>";
+  q +="<tr><th colspan='2'><img src='data/"+mname+".png' width='200'></th></tr>";
   q += "<tr><th>Movie name</th><th> " + mname + "</th></tr>";
   q += "<tr><th>Movie price</th><th>" + mprice + "</th></tr>";
   q += "<tr><th>Ticket qyt </th><th>" + qt + "</th></tr>";
