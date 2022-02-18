@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+<script src="train_ticket.js"></script>
 <html>
 <title>railway.com</title>
-<body>
-    <table width="100%" height="7%">
+<body >
+    <table bgcolor="#7FBCE4 " width="100%" height="7%">
         <tr>
             <td align="left"><img src="data/irctc.png" width="200" height="80"></td>
             <td align="right"><img src="data/irctclogo.png" width="700" height="80"></td>
@@ -15,56 +16,43 @@
 <table align="center" border="1" cellspacing="0" cellpadding="5" width="600"><br><br>
     <tr><td colspan="2" align="center"><b>Ticket form</b></td></tr>
     <tr>
-        <td><b>choose location</b></td>
+        <td><b>Choose location</b></td>
         <th>
             <span> <select id="state" required>
-                    <option>select</option>
-                    <option >gwalior</option>
-                    <option >agra</option>
-                    <option >dholpur</option>
-                </select><span> TO </span>
-                <select id="states" required>
-                    <option>select</option>
-                    <option >datia</option>
-                    <option >mathura</option>
-                    <option >dehli</option>
-                    <option >jhansi</option>
+                    <option>-Select-</option>
+                    <option >Galior</option>
+                    <option >Datia</option>
+                    <option >Jhansi</option>
+            </select>
+            <span> TO </span>
+            <select id="states" required>
+                    <option>-Select-</option>
+                    <option >Morena</option>
+                    <option >Agra</option>
+                    <option >Mathura</option>
+                    <option >Delhi</option>
             </span>
 
         </th>
     </tr>
     <tr>
-        <td><b>choose train name:</b></td>
+        <td><b>Choose train name:</b></td>
         <th>
             <span> <select id="nam" required>
-                    <option>select</option>
-                    <option>Taj Express</option>
-                    <option>Bundelkhand express</option>
-                    <option>Dehli Express</option>
+                    <option>-Select-</option>
+                    <option value="123422">Taj Express</option>
+                    <option value="433433">Bundelkhand express</option>
+                    <option value="111222">Dehli Express</option>
                 </select>
             </span>
 
         </th>
     </tr>
-    <tr>
-        <td><b>Your name</b></td>
-        <th>
-            <span><input required id="nm" type="text"></span>
-
-        </th>
-    </tr>
-    <tr>
-        <td><b>Your age</b></td>
-        <th>
-            <span><input required id="ag" type="text"></span>
     
-        </th>
-    </tr>
     <tr>
-        <td><b>distance</b></td>
+        <td><b>Distance</b></td>
         <th>
-            <span><input required type="text" id="dis"></span>
-    
+            <span><input required type="text" id="dis" placeholder="enter distance"></span>
         </th>
     </tr>
 </table><br><br>
@@ -72,31 +60,31 @@
 <table align="center" border="1" cellspacing="0" cellpadding="5" width="600">
       <tr><td colspan="4" align="center"><b>Passengers information </b></td></tr>
       <tr> 
-          <th>sr.no</th>
+          <th>Sr.no</th>
           <th>Name</th>
           <th>Age</th>
           <th>Gender</th>
       </tr>
     <tr>
         <th>1.</th>
-        <td><input required id="name1" type="text"></td>
-        <td><input required id="age1" type="text"></td>
+        <td><span><input required id="name1" type="text" placeholder="enter name"></span></td>
+        <td><span><input required id="age1" type="text" placeholder="enter age"></span></td>
         <td>
-            <select id="age1" required>
-                <option>select</option>
+            <span><select id="gen1"  required>
+                <option>-Select-</option>
                 <option>Male</option>
                 <option>Female</option>
                 <option>Other</option>
-            </select>
+            </select></span>
         </td>
     </tr>
     <tr>
         <th>2.</th>
-        <td><input required id="name2" type="text"></td>
-        <td><input required id="age2" type="text"></td>
+        <td><input required id="name2" type="text" placeholder="enter name"></td>
+        <td><input required id="age2" type="text" placeholder="enter age"></td>
         <td>
-            <select required id="age2">
-                <option>select</option>
+            <select required id="gen2">
+                <option>-Select-</option>
                 <option>Male</option>
                 <option>Female</option>
                 <option>Other</option>
@@ -105,11 +93,11 @@
     </tr>
     <tr>
         <th>3.</th>
-        <td><input required id="name3" type="text"></td>
-        <td><input required id="age3" type="text"></td>
+        <td><input required id="name3" type="text" placeholder="enter name"></td>
+        <td><input required id="age3" type="text" placeholder="enter age"></td>
         <td>
-            <select required id="age3">
-                <option>select</option>
+            <select required id="gen3">
+                <option>-Select-</option>
                 <option>Male</option>
                 <option>Female</option>
                 <option>Other</option>
@@ -119,34 +107,9 @@
 
 </table>
 
-<div align="center">Press book ticket to book your ticket:<span> <input type="button" value="book ticket"
-            onclick="call()"></span></div>
+<br><br><div align="center">Press book ticket to book your ticket:<span> <input type="button" value="book ticket" onclick="call()"></span></div>
 
-<br><br><br><br><div align="center" id="result"></div>
+<br><br><br><br><div align="center" id="result"></div><br><br><br><br>
 </body>
 </html>
 
-<script>
-    function call() {
-
-        var from = state.options[state.selectedIndex].text
-        var to = states.options[states.selectedIndex].text
-        var tnm = nam.options[nam.selectedIndex].text
-        var di = dis.value
-
-
-      
-
-        var q = "<table border='1' width='600' cellspacing='0' cellpadding='5'>"
-          q+= "<th colspan='4'> <img src='data/irctc.png' width='200' </th>"
-        q += "<tr><th>From</th><th>" + from + "</th></tr>"
-        q += "<tr><th>To</th><th>" + to + "</th></tr>"
-        q += "<tr><th>Train name</th><th>" + tnm + "</th></tr>"
-        q += "<tr><th>price</th><th>" + di*2 + "</th></tr></table>"
-
-
-        result.innerHTML = q
-
-    }
-
-</script>

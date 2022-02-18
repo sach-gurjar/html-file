@@ -4,12 +4,14 @@
 <title>result.com</title>
 <html>
     <body bgcolor="#CEE4F3" onload="show()">
-        <h1 align="center">Result</h1><hr width="20%" >
+        <table width="100%" height="5%"><th bgcolor="#819CAE "><h1 align="center">Result</h1></th></table>
        <table align="left" width="100%" height="20%">
             <tr >
+                
                  <td> 
                      <img align="left" src="data/cbselogo1.png" width="150" height="140" >
                 </td>
+                
                 <td>
                     <img align="right" src="data/cbselogo2.png" width="150" height="140">
                 </td>
@@ -18,35 +20,114 @@
 
     
     <table align="center" border="1" callspacing="0" callpadding="5" width="60%">
-        
+        <th bgcolor="#ACA2A9" colspan="3">Student information </th>
         <tr>
             <th>Candidate Name</th>
-            <th><input  type="text" placeholder="First Name" >
-            <input type="text" placeholder="Last Name"></th>
+            <th><input id="cn" type="text" placeholder="First Name" >
+            <input id="cn1"type="text" placeholder="Last Name"></th>
             
             
         </tr>
 
         <tr>
             <th>Father Name</th>
-            <th><input type="text" placeholder="Full Name"></th>
+            <th><input id="fn" type="text" placeholder="Full Name"></th>
             
         </tr>
 
         <tr>
             <th>Candidate Rollno</th>
-            <th><input type="text" placeholder="Roll number"></th>
+            <th><input id="cr" type="text" placeholder="Roll number"></th>
         </tr>
 
         <tr>
-            <th>gen</th>
-            <th><input type="radio" id="m" name="mm" value="Male">Male
-            <input type="radio" id="m" name="mm" value="Female">Female
-            <input type="radio" id="m" name="mm" value="other">other</th>
+            <th> Date of birth </th>
+            <th><input id="dob" type="date" ></th>
         </tr>
-    </table>
- 
 
+        <tr>
+            <th>Gender</th>
+            <th><input type="radio" id="m" name="mm" value="Male">Male
+            <input type="radio" id="f" name="mm" value="Female">Female
+            <input type="radio" id=o name="mm" value="other">other</th>
+        </tr>
+    </table><br><br>
+    
+    
+    <table align="center" border="1" callspacing="0" callpadding="5" width="60%">
+        <th bgcolor="#ACA2A9" colspan="5">Marks info </th>
+        <tr>
+            <th><b>Paper Code</b></th><th><b>Subject</b></th><th><b>Min</b></th><th><b>Max</b></th><th><b>Marks Obtained</b></th>
+        </tr>
+        
+        <tr>
+            <th>101</th>
+            <th>Hindi</th>
+            <th>33</th>
+            <th>100</th>
+            <th><input id="hindi" type="number"  placeholder="Enter Hindi Marks"></th>
+    
+        </tr>
+
+        <tr>
+            <th>102</th>
+            <th>English</th>
+            <th>33</th>
+            <th>100</th>
+            <th><input id="english" type="number" placeholder="Enter English Marks"></th>
+        
+        </tr>
+
+        <tr>
+            <th>103</th>
+            <th>Math</th>
+            <th>33</th>
+            <th>100</th>
+            <th><input id="math" type="number" placeholder="Enter Math Marks"></th>
+        
+        </tr>
+
+        <tr>
+            <th>104</th>
+            <th>Physics</th>
+            <th>33</th>
+            <th>100</th>
+            <th><input id="physics" type="number" placeholder="Enter Physics Marks"></th>
+        
+        </tr>
+
+        <tr>
+            <th>105</th>
+            <th>Chemistry</th>
+            <th>33</th>
+            <th>100</th>
+            <th><input id="chemistry" type="number" placeholder="Enter Chemistry Marks"></th>
+        
+        </tr>
+
+        <tr>
+            <th><b>-</b></th>
+            <th><b>-</b></th>
+            <th><b>-</b></th>
+            <th><b>500</b></th>
+            <th><b>-</b></th>
+        </tr>
+    
+        
+    </table><br><br>
+      <center>
+        <spanb>Click to submit button :</b><input type="button" value="submit"  onclick="call()"></span>
+      </center><br><br>
+      <div  align="center" id="logoimg"></div>
+      <div align="center" id="logoimg1"></div>
+      <div align="center" id="logoimg2"></div>
+    <br><br>
+
+      <table>
+          <tr>
+              <td></td>
+          </tr>
+      </table>
 
     </body>
 
