@@ -41,30 +41,42 @@ function call3() {
   var mat = parseFloat(math.value);
   var phy = parseFloat(physics.value);
   var che = parseFloat(chemistry.value);
-
+   
   var tm = hin + eng + mat + phy + che;
-  var pr = ((hin + eng + mat + phy + che) / 500) * 100;
+  var pr = ((tm) / 500) * 100;
+  var remark=new Array(0)
 
+  var k=true
+   
    if(hin>=0 && hin<=33){
-       hinn="*"
+       k=false
+       hinn="fail"
    }
     else if(hin>=34 && hin<=74){
        hinn="pass"
     }
    else if(hin>=75 && hin<=100){
-       hinn="D"
+       hinn="D" 
    }
+   
+   remark.push(hinn)
+
    if (eng >= 0 && eng <=33) {
-     engg = "*";
+        k = false;
+     engg = "fail";
    } 
    else if (eng >= 34 && eng <= 74) {
      engg = "pass";
    } 
    else if (eng >= 75 && eng <= 100) {
      engg = "D";
+    
    }
+   remark.push(engg)
+
    if (mat >= 0 && mat <=33) {
-     matt = "*";
+        k = false;
+     matt = "fail";
    }
     else if (mat >=34 && mat <=74) {
      matt = "pass";
@@ -72,8 +84,11 @@ function call3() {
     else if (mat >= 75 && mat <= 100) {
      matt = "D";
    }
+   remark.push(matt)
+
    if (phy >= 0 && phy <=33) {
-     phyy = "*";
+        k = false;
+     phyy = "fail";
    } 
    else if (phy >= 34 && phy <= 74) {
      phyy = "pass";
@@ -81,8 +96,11 @@ function call3() {
    else if (phy >= 75 && phy <= 100) {
      phyy = "D";
    }
+   remark.push(phyy)
+
     if (che >= 0 && che <= 33) {
-     chee = "*";
+         k = false;
+     chee = "fail";
    } 
    else if (che >= 34 && che <= 74) {
      chee = "pass";
@@ -90,7 +108,13 @@ function call3() {
    else if (che >= 75 && che <= 100) {
      chee = "D";
    }
+   remark.push(chee)
+   
 
+
+
+if(k)
+{
   if (pr >= 60 && pr <= 100) {
     dd = "first division";
   } else if (pr >= 45 && pr <= 59) {
@@ -98,22 +122,45 @@ function call3() {
   } else if (pr >= 33 && pr <= 44) {
     dd = "third division";
   }
-
+}
+else{
+    dd="fail"
+}
   var o = "<table border='1' width='60%' cellspacing='0' cellpadding='5'>";
       o += "<th bgcolor='#ACA2A9' colspan ='6'>Marks</th>";
 
       o +="<tr><th>Paper Code</th><th>Subject</th><th>Min marks</th>"+
            "<th>max marks</th><th>Marks Obtained</th><th>Remark</th></th></tr>";
 
-      o +="<tr><th>101.</th><th>Hindi</th><th>33</th><th>100</th><th>"+hindi.value +"</th></tr>";
+      o +="<tr><th>101.</th><th>Hindi</th><th>33</th><th>100</th><th>"+hindi.value +"</th><th>"+remark[0]+"</th></tr>";
 
-      o +="<tr><th>102.</th><th>English</th><th>33</th><th>100</th><th>"+english.value +"</th></tr>";
+      o +=
+        "<tr><th>102.</th><th>English</th><th>33</th><th>100</th><th>" +
+        english.value +
+        "</th><th>" +
+        remark[1] +
+        "</th></tr>";
 
-      o +="<tr><th>103.</th><th>Math</th><th>33</th><th>100</th><th>" + math.value + "</th></tr>";
+      o +=
+        "<tr><th>103.</th><th>Math</th><th>33</th><th>100</th><th>" +
+        math.value +
+        "</th><th>" +
+        remark[2] +
+        "</th></tr>";
     
-      o +="<tr><th>104.</th><th>Physics</th><th>33</th><th>100</th><th>" + physics.value + "</th></tr>";
+      o +=
+        "<tr><th>104.</th><th>Physics</th><th>33</th><th>100</th><th>" +
+        physics.value +
+        "</th><th>" +
+        remark[3] +
+        "</th></tr>";
 
-      o +="<tr><th>105.</th><th>Chemistry</th><th>33</th><th>100</th><th>" +chemistry.value +"</th></tr>";
+      o +=
+        "<tr><th>105.</th><th>Chemistry</th><th>33</th><th>100</th><th>" +
+        chemistry.value +
+        "</th><th>" +
+        remark[4] +
+        "</th></tr>";
 
       o += `<tr bgcolor='#9CAA82' ><th colspan ='2'><b>Total marks = ${tm} </b></th>
            <th  colspan='2'><b>Percentage= ${pr} </b></th><th colspan='2'><b>Division= ${dd} </b></th></tr></table>`;
