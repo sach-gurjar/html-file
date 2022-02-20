@@ -2,7 +2,7 @@
 <script src="train_ticket.js"></script>
 <html>
 <title>railway.com</title>
-<body >
+<body onload="ttt()" onchange="dd()" >
     <table bgcolor="#7FBCE4 " width="100%" height="7%">
         <tr>
             <td align="left"><img src="data/irctc.png" width="200" height="80"></td>
@@ -13,25 +13,32 @@
    <div align="center"><font  size="15">IRCTC</font></div>
    <hr width="10%">
 
-<table align="center" border="1" cellspacing="0" cellpadding="5" width="600"><br><br>
+   <div id="ttrr"></div>
+  
+   <table align="center" border="1" cellspacing="0" cellpadding="5" width="600"><br><br>
     <tr><td colspan="2" align="center"><b>Ticket form</b></td></tr>
     <tr>
         <td><b>Choose location</b></td>
         <th>
-            <span> <select id="state" required>
-                    <option>-Select-</option>
-                    <option >Gwalior</option>
-                    <option >Datia</option>
-                    <option >Jhansi</option>
+           <select id="ct" title="select sorce">
+                <option>-source-</option>
+                <option value="0">Gwalior</option>
+                <option value="120">Agra</option>
+                <option value="172">Mathura</option>
+                <option value="342">new Delhi</option>
+                <option value="732">Jalandhar</option>
+                <option value="811">Amritsar</option>
             </select>
-            <span> TO </span>
-            <select id="states" required>
-                    <option>-Select-</option>
-                    <option >Morena</option>
-                    <option >Agra</option>
-                    <option >Mathura</option>
-                    <option >Delhi</option>
-            </span>
+            <span><b>To</b></span>
+            <select id="ct1" title="select destination">
+                <option>-destination-</option>
+                <option value="0">Gwalior</option>
+                <option value="120">Agra</option>
+                <option value="172">Mathura</option>
+                <option value="342">new Delhi</option>
+                <option value="732">Jalandhar</option>
+                <option value="811">Amritsar</option>
+            </select>
 
         </th>
     </tr>
@@ -52,11 +59,11 @@
     <tr>
         <td><b>Distance</b></td>
         <th>
-            <span><input required type="text" id="dis" placeholder="enter distance"></span>
+            <span id="dis"> </span>
         </th>
     </tr>
 </table><br><br>
-
+</body>
 <table align="center" border="1" cellspacing="0" cellpadding="5" width="600">
       <tr><td colspan="4" align="center"><b>Passengers information </b></td></tr>
       <tr> 
@@ -68,7 +75,7 @@
     <tr>
         <th>1.</th>
         <td><span><input required id="name1" type="text" placeholder="enter name"></span></td>
-        <td><span><input required id="age1" type="text" placeholder="enter age"></span></td>
+        <td><span><input required id="age1" type="number" placeholder="enter age"></span></td>
         <td>
             <span><select id="gen1"  required>
                 <option>-Select-</option>
@@ -81,7 +88,7 @@
     <tr>
         <th>2.</th>
         <td><input required id="name2" type="text" placeholder="enter name"></td>
-        <td><input required id="age2" type="text" placeholder="enter age"></td>
+        <td><input required id="age2" type="number" placeholder="enter age"></td>
         <td>
             <select required id="gen2">
                 <option>-Select-</option>
@@ -94,7 +101,7 @@
     <tr>
         <th>3.</th>
         <td><input required id="name3" type="text" placeholder="enter name"></td>
-        <td><input required id="age3" type="text" placeholder="enter age"></td>
+        <td><input required id="age3" type="number" placeholder="enter age"></td>
         <td>
             <select required id="gen3">
                 <option>-Select-</option>
@@ -110,6 +117,6 @@
 <br><br><div align="center">Press book ticket to book your ticket:<span> <input type="button" value="book ticket" onclick="call()"></span></div>
 
 <br><br><br><br><div align="center" id="result"></div><br><br><br><br>
-</body>
+
 </html>
 

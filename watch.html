@@ -7,15 +7,15 @@
     function start(){
        tt= setInterval(call,1000)
     }
-    // function stop(){
-    //     clearInterval(tt)
-    // }
+    function stop(){
+        clearInterval(tt)
+    }
 </script>
 <html>
     
     <body onload="start()">
     <center><h1> <di id="result"></di></h1></center>
-    <!-- <div align="center"><input type="button" value="stop" onclick="stop()"></div>
-    <div align="center"><input type="button" value="start again" onclick="start()"></div> -->
+    <div align="center"><input type="button" value="stop" onclick="stop()"></div>
+    <div align="center"><input type="button" value="start again" onclick="start()"></div>
     </body>
 </html>

@@ -12,7 +12,7 @@
             <tr>
     
                 <td>
-                    <img align="left" src="data/FedEx.png" width="400" height="140">
+                    <img align="left" src="data/FedEx.png" width="400" height="140" title="fetching image">
                 </td>
     
                
@@ -24,7 +24,7 @@
             <th bgcolor="#ACA2A9" colspan="3">Your parcel </th>
             <tr>
                 <th>Location</th>
-                <th><select id="ct" placeholder="source">
+                <th><select id="ct"  title="select sorce">
                     <option>-source-</option>
                     <option value="0">Gwalior</option>
                     <option value="120">Agra</option>
@@ -34,7 +34,7 @@
                     <option value="811">Amritsar</option>
                     </select>
                     <span><b>To</b></span>
-                    <select id="ct1" placeholder="destination">
+                    <select id="ct1" title="select destination">
                         <option>-destination-</option>
                         <option value="0">Gwalior</option>
                         <option value="120">Agra</option>
@@ -51,6 +51,12 @@
                 <th>Distance</th>
                 <th><span id="dis"></span></th>
         
+            </tr>
+
+            <tr>
+                <th>weight</th>
+                <th><input type="number"  id="wt" placeholder="weight" title="weight"></th>
+            
             </tr>
 
         
