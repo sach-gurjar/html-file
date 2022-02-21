@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <script>
+    
     function call(){
-        var a=100000+parseInt(Math.random()*9999)+1
+        var a=1000+parseInt(Math.random()*8999)+1
         alert(a)
-        // if(w==a)
-        // {
-
-        // }
+        var r=a
+        
+        
+       
+    }
+    function btn(){
+        var b=match.value
+        if(r==b){
+        alert("ho ja yaar")
+        }
     }
 </script>
-<html>
-    <input type="button" value="click" onclick="call()">
-    <!-- <input  type="text" onclick="ss()"> -->
+  <html>
+  <body onload="call()" onkeyup="btn()">
+    
+   
+
+     <div align="center">
+         <input type="text" id="match" placeholder="ENTER OTP"  >
+
+    </div>
+   
+   
+   </body>
+
+    
+
 </html>
