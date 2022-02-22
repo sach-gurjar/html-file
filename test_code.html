@@ -1,34 +1,44 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <script>
-    
+    var b
     function call(){
-        var a=1000+parseInt(Math.random()*8999)+1
-        alert(a)
-        var r=a
-        
-        
+        var a=1000+parseInt(Math.random()*8999)
+       alert(a)
+
+        b=a
+    }
+    function show(){
+            
+           if(b==match.value){
+
+            alert("bhai chal ja yrr kyu paka raha hai")
+            
+            
+           }
+           
+     }
        
-    }
-    function btn(){
-        var b=match.value
-        if(r==b){
-        alert("ho ja yaar")
-        }
-    }
+   
+    
 </script>
+
   <html>
-  <body onload="call()" onkeyup="btn()">
+  <body onload="call()" >
     
    
-
-     <div align="center">
-         <input type="text" id="match" placeholder="ENTER OTP"  >
-
-    </div>
+</body>
+     
+         <input type="text" id="match" placeholder="enter otp" onkeyup="show()" >
+         <div id="uu"></div>
+    
    
    
-   </body>
+   
 
     
 
 </html>
+
+
+
+ 
