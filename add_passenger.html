@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<script>
+    var i=0
+    function call() {
+     var pp=new Array(0)
+     pp.push(ins.value)
+     pp.push(ins.value)
+    //  alert(pp)
+    
+     alert(pp.length)
+
+     ps.innerHTML=ins.value
+     ps1.innerHTML = ins1.value
+
+    }
+    function butt(arr,dd){
+        for (var i = 0; i < arr.length; i++) {
+            var opt = document.createElement("input");
+            opt.text = arr[i]
+            dd.add(opt);
+            i++
+        }
+    }
+</script>
+<html>
+
+    <div><input type="button" value="aad inbox" id="inbox" onclick="butt()"></div>
+    <input type="text" onkeyup="call()" id="ins"><br><br>
+    <div id="ps"></div>
+    <div id="dd"><input type="text" onkeyup="call()" id="ins"></div><br></br>
+    <div id="ps1"></div>
+
+    
+    
+    
+      
+
+</html>

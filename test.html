@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<script>
+ 
+function firstnamechecker()
+{
+    y=nameid.value
+   
+    for(i=0;i<y.length;i++)
+    {
+        x=y.charCodeAt(i)
+        if(((x>=65)&&(x<=90))||((x>=97)&&(x<=122)))
+        { 
+            val.innerHTML="valid"
+        }
+        else{
+            val.innerHTML="invalid"
+        }
+
+    }
+
+}
+function lastnamechecker(){
+
+     z=lastnameid.value
+
+    for (i = 0; i < z.length; i++) {
+        x = z.charCodeAt(i)
+        if (((x >= 65) && (x <= 90)) || ((x >= 97) && (x <= 122))) {}
+        else {
+            va.innerHTML="invalid"
+        }
+
+    }
+}
+function numberchecker(){
+    // if((nameid.value.length==0)||(lastnameid.value.length==0)){
+    // msg.innerHTML="you can not leave the cell empty"
+    // }
+    
+    for(i=0; i < numberid.value.length; i++){
+
+        a= numberid.value.charCodeAt(i)
+
+        if((a>=48) && (a<=57)){}
+        else{
+            alert("number is invalid")
+        }
+    }
+
+}
+</script>
+    
+<html>
+    <body >
+    <div><label for="Name">Name</label></div>
+    <span><input type="text" id="nameid" onkeyup="firstnamechecker()" placeholder="First Name"><span id="val"></span>
+    <input type="text" id="lastnameid" onkeyup="lastnamechecker()"placeholder="Last Name"></span><span id="va"></span><br><br>
+     <div id="msg"></div>
+    <div><label for="phone number">phone number</label></div>
+    <span><input type="text" id="numberid" onkeyup="numberchecker()" placeholder="number"></span><span id="no"></span><br><br>
+    
+    <div><label for="Emial">Email</label></div>
+    <span><input type="email" id="emailid" placeholder="email"></span><br><br>
+    
+    <div><label for="gender">Gender</label></div>
+    <span>
+        <input type="radio" id="maleid" name="gen" value="male">Male
+        <input type="radio" id="femaleid" name="gen" value="female">female
+    </span><br><br>
+   
+    <div><label for="Date">Date</label></div>
+    <div><input type="date" id="dateid" ></div><br><br>
+    
+    <div><label for="Password">Password</label></div>
+    <div><input type="text" id="passwordid" placeholder="password" ></div>
+    
+    <div><label for="Confirm Password">Confirm Password</label></div>
+    <div><input type="text" id="Confirmpasswordid" placeholder="Confirm password"></div><br><br>
+   </body>
+
+</html>
