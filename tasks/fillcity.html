@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>dropdown list:</title>
+</head>
+<h1>choose location:</h1>
+<hr>
+
+<body  onload="fillstate()">
+
+     
+    <span>State<select id="state" onchange="fillcity()">
+            <option>select</option>
+        </select></span>
+
+    <span>City<select id="city">
+            <option>select</option>
+        </select></span><br><br>
+
+
+</body>
+
+</html>
+
+
+<script>
+
+
+    // function show() {
+    //     arr = [["pepsi", 1000], ["cock", 200], ["sprite", 30]]
+    //     arr.forEach((item) =  {
+
+    //         alert(item)
+    //     })
+    // }
+
+    function fillstate() {
+        removedd(state);
+
+        var arr = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Dadra and Nagar Haveli', 'Daman and Diu', 'Delhi', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jammu and Kashmir', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Orissa', 'Pondicherry (Puducherry)', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'];
+
+
+        filldd(arr, state);
+
+    }
+    function fillcity() {
+        removedd(city);
+
+        switch (state.selectedIndex) {
+            case 1:
+                var AP = ['Adilabad', 'Anantapur', 'Chittoor', 'Kakinada', 'Guntur', 'Hyderabad', 'Karimnagar', 'Khammam', 'Krishna', 'Kurnool', 'Mahbubnagar', 'Medak', 'Nalgonda', 'Nizamabad', 'Ongole', 'Hyderabad', 'Srikakulam', 'Nellore', 'Visakhapatnam', 'Vizianagaram', 'Warangal', 'Eluru', 'Kadapa']
+                filldd(AP, city);
+                break
+            case 2:
+                var AR = ['Anjaw', 'Changlang', 'East Siang', 'Kurung Kumey', 'Lohit', 'Lower Dibang Valley', 'Lower Subansiri', 'Papum Pare', 'Tawang', 'Tirap', 'Dibang Valley', 'Upper Siang', 'Upper Subansiri', 'West Kameng', 'West Siang',]
+                filldd(AR, city);
+                break
+            case 3:
+                var AS = ['Baksa', 'Barpeta', 'Bongaigaon', 'Cachar', 'Chirang', 'Darrang', 'Dhemaji', 'Dima Hasao', 'Dhubri', 'Dibrugarh', 'Goalpara', 'Golaghat', 'Hailakandi', 'Jorhat', 'Kamrup', 'Kamrup Metropolitan', 'Karbi Anglong', 'Karimganj', 'Kokrajhar', 'Lakhimpur', 'Marigaon', 'Nagaon', 'Nalbari', 'Sibsagar', 'Sonitpur', 'Tinsukia', 'Udalguri',]
+                filldd(AS, city);
+                break
+
+            case 4:
+                var BR = ['Araria', 'Arwal', 'Aurangabad', 'Banka', 'Begusarai', 'Bhagalpur', 'Bhojpur', 'Buxar', 'Darbhanga', 'East Champaran', 'Gaya', 'Gopalganj', 'Jamui', 'Jehanabad', 'Kaimur', 'Katihar', 'Khagaria', 'Kishanganj', 'Lakhisarai', 'Madhepura', 'Madhubani', 'Munger', 'Muzaffarpur', 'Nalanda', 'Nawada', 'Patna', 'Purnia', 'Rohtas', 'Saharsa', 'Samastipur', 'Saran', 'Sheikhpura', 'Sheohar', 'Sitamarhi', 'Siwan', 'Supaul', 'Vaishali', 'West Champaran', 'Chandigarh',]
+                filldd(BR, city);
+                break
+            case 5:
+                var CG = ['Bastar', 'Bijapur', 'Bilaspur', 'Dantewada', 'Dhamtari', 'Durg', 'Jashpur', 'Janjgir - Champa', 'Korba', 'Koriya', 'Kanker', 'Kabirdham(Kawardha)', 'Mahasamund', 'Narayanpur', 'Raigarh', 'Rajnandgaon', 'Raipur', 'Surguja',]
+                filldd(CG, city);
+                break
+            case 6:
+                var DN = ['Dadra', 'Nagar Haveli']
+                filldd(DN, city);
+                break
+            case 7:
+                var DD = ['Daman', 'Diu',]
+                filldd(DD, city);
+                break
+            case 8:
+                var DL = ['Central Delhi', 'East Delhi', 'New Delhi', 'North Delhi', 'North East Delhi', 'North West Delhi', 'South Delhi', 'South West Delhi', 'West Delhi',]
+                filldd(DL, city);
+                break
+
+            case 9:
+                var GA = ['North Goa', 'South Goa']
+                filldd(GA, city);
+                break
+            case 10:
+                var GJ = ['Ahmedabad', 'Amreli district', 'Anand', 'Banaskantha', 'Bharuch', 'Bhavnagar', 'Dahod', 'The Dangs', 'Gandhinagar', 'Jamnagar', 'Junagadh', 'Kutch', 'Kheda', 'Mehsana', 'Narmada', 'Navsari', 'Patan', 'Panchmahal', 'Porbandar', 'Rajkot', 'Sabarkantha', 'Surendranagar', 'Surat', 'Vyara', 'Vadodara', 'Valsad',]
+                filldd(GJ, city);
+                break
+            case 11:
+                var HR = ['Ambala', 'Bhiwani', 'Faridabad', 'Fatehabad', 'Gurgaon', 'Hissar', 'Jhajjar', 'Jind', 'Karnal', 'Kaithal', 'Kurukshetra', 'Mahendragarh', 'Mewat', 'Palwal', 'Panchkula', 'Panipat', 'Rewari', 'Rohtak', 'Sirsa', 'Sonipat', 'Yamuna Nagar',]
+                filldd(HR, city);
+                break
+            case 12:
+                var HP = ['Bilaspur', 'Chamba', 'Hamirpur', 'Kangra', 'Kinnaur', 'Kullu', 'Lahaul and Spiti', 'Mandi', 'Shimla', 'Sirmaur', 'Solan', 'Una',]
+                filldd(HP, city);
+                break
+            case 13:
+                var JK = ['Anantnag', 'Badgam', 'Bandipora', 'Baramulla', 'Doda', 'Ganderbal', 'Jammu', 'Kargil', 'Kathua', 'Kishtwar', 'Kupwara', 'Kulgam', 'Leh', 'Poonch', 'Pulwama', 'Rajauri', 'Ramban', 'Reasi', 'Samba', 'Shopian', 'Srinagar', 'Udhampur',]
+                filldd(JK, city);
+                break
+            case 14:
+                var JH = ['Bokaro', 'Chatra', 'Deoghar', 'Dhanbad', 'Dumka', 'East Singhbhum', 'Garhwa', 'Giridih', 'Godda', 'Gumla', 'Hazaribag', 'Jamtara', 'Khunti', 'Koderma', 'Latehar', 'Lohardaga', 'Pakur', 'Palamu', 'Ramgarh', 'Ranchi', 'Sahibganj', 'Seraikela Kharsawan', 'Simdega', 'West Singhbhum',]
+                filldd(JH, city);
+                break
+            case 15:
+                var KA = ['Bagalkot', 'Bangalore Rural', 'Bangalore Urban', 'Belgaum', 'Bellary', 'Bidar', 'Bijapur', 'Chamarajnagar', 'Chikkamagaluru', 'Chikkaballapur', 'Chitradurga', 'Davanagere', 'Dharwad', 'Dakshina Kannada', 'Gadag', 'Gulbarga', 'Hassan', 'Haveri district', 'Kodagu', 'Kolar', 'Koppal', 'Mandya', 'Mysore', 'Raichur', 'Shimoga', 'Tumkur', 'Udupi', 'Uttara Kannada', 'Ramanagara', 'Yadgir',]
+                filldd(KA, city);
+                break
+            case 16:
+                var KL = ['Alappuzha', 'Ernakulam', 'Idukki', 'Kannur', 'Kasaragod', 'Kollam', 'Kottayam', 'Kozhikode', 'Malappuram', 'Palakkad', 'Pathanamthitta', 'Thrissur', 'Thiruvananthapuram', 'Wayanad',]
+                filldd(KL, city);
+                break
+            case 17:
+                var MP = ['Alirajpur', 'Anuppur', 'Ashok Nagar', 'Balaghat', 'Barwani', 'Betul', 'Bhind', 'Bhopal', 'Burhanpur', 'Chhatarpur', 'Chhindwara', 'Damoh', 'Datia', 'Dewas', 'Dhar', 'Dindori', 'Guna', 'Gwalior', 'Harda', 'Hoshangabad', 'Indore', 'Jabalpur', 'Jhabua', 'Katni', 'Khandwa(East Nimar)', 'Khargone(West Nimar)', 'Mandla', 'Mandsaur', 'Morena', 'Narsinghpur', 'Neemuch', 'Panna', 'Rewa', 'Rajgarh', 'Ratlam', 'Raisen', 'Sagar', 'Satna', 'Sehore', 'Seoni', 'Shahdol', 'Shajapur', 'Sheopur', 'Shivpuri', 'Sidhi', 'Singrauli', 'Tikamgarh', 'Ujjain', 'Umaria', 'Vidisha',]
+                filldd(MP, city);
+                break
+            case 18:
+                var MH = ['Ahmednagar', 'Akola', 'Amravati', 'Aurangabad', 'Bhandara', 'Beed', 'Buldhana', 'Chandrapur', 'Dhule', 'Gadchiroli', 'Gondia', 'Hingoli', 'Jalgaon', 'Jalna', 'Kolhapur', 'Latur', 'Mumbai City', 'Mumbai suburban', 'Nandurbar', 'Nanded', 'Nagpur', 'Nashik', 'Osmanabad', 'Parbhani', 'Pune', 'Raigad', 'Ratnagiri', 'Sindhudurg', 'Sangli', 'Solapur', 'Satara', 'Thane', 'Wardha', 'Washim', 'Yavatmal',]
+                filldd(MH, city);
+                break
+            case 19:
+                var MN = ['Bishnupur', 'Churachandpur', 'Chandel', 'Imphal East', 'Senapati', 'Tamenglong', 'Thoubal', 'Ukhrul', 'Imphal West',]
+                filldd(MN, city);
+                break
+            case 20:
+                var ML = ['East Garo Hills', 'East Khasi Hills', 'Jaintia Hills', 'Ri Bhoi', 'South Garo Hills', 'West Garo Hills', 'West Khasi Hills',]
+                filldd(ML, city);
+                break
+            case 21:
+                var MZ = ['Aizawl', 'Champhai', 'Kolasib', 'Lawngtlai', 'Lunglei', 'Mamit', 'Saiha', 'Serchhip',]
+                filldd(MZ, city);
+                break
+            case 22:
+                var NL = ['Dimapur', 'Kohima', 'Mokokchung', 'Mon', 'Phek', 'Tuensang', 'Wokha', 'Zunheboto',]
+                filldd(NL, city);
+                break
+            case 23:
+                var OR = ['Angul', 'Boudh(Bauda)', 'Bhadrak', 'Balangir', 'Bargarh(Baragarh)', 'Balasore', 'Cuttack', 'Debagarh(Deogarh)', 'Dhenkanal', 'Ganjam', 'Gajapati', 'Jharsuguda', 'Jajpur', 'Jagatsinghpur', 'Khordha', 'Kendujhar(Keonjhar)', 'Kalahandi', 'Kandhamal', 'Koraput', 'Kendrapara', 'Malkangiri', 'Mayurbhanj', 'Nabarangpur', 'Nuapada', 'Nayagarh', 'Puri', 'Rayagada', 'Sambalpur', 'Subarnapur(Sonepur)', 'Sundergarh',]
+                filldd(OR, city);
+                break
+            case 24:
+                var PY = ['Karaikal', 'Mahe', 'Pondicherry', 'Yanam',]
+                filldd(PY, city);
+                break
+            case 25:
+                var PB = ['Amritsar', 'Barnala', 'Bathinda', 'Firozpur', 'Faridkot', 'Fatehgarh Sahib', 'Fazilka', 'Gurdaspur', 'Hoshiarpur', 'Jalandhar', 'Kapurthala', 'Ludhiana', 'Mansa', 'Moga', 'Sri Muktsar Sahib', 'Pathankot', 'Patiala', 'Rupnagar', 'Ajitgarh(Mohali)', 'Sangrur', 'Nawanshahr', 'Tarn Taran',]
+                filldd(PB, city);
+                break
+            case 26:
+                var RJ = ['Ajmer', 'Alwar', 'Bikaner', 'Barmer', 'Banswara', 'Bharatpur', 'Baran', 'Bundi', 'Bhilwara', 'Churu', 'Chittorgarh', 'Dausa', 'Dholpur', 'Dungapur', 'Ganganagar', 'Hanumangarh', 'Jhunjhunu', 'Jalore', 'Jodhpur', 'Jaipur', 'Jaisalmer', 'Jhalawar', 'Karauli', 'Kota', 'Nagaur', 'Pali', 'Pratapgarh', 'Rajsamand', 'Sikar', 'Sawai Madhopur', 'Sirohi', 'Tonk', 'Udaipur',]
+                filldd(RJ, city);
+                break
+            case 27:
+                var SK = ['East Sikkim', 'North Sikkim', 'South Sikkim', 'West Sikkim',]
+                filldd(SK, city);
+                break
+            case 28:
+                var TN = ['Ariyalur', 'Chennai', 'Coimbatore', 'Cuddalore', 'Dharmapuri', 'Dindigul', 'Erode', 'Kanchipuram', 'Kanyakumari', 'Karur', 'Madurai', 'Nagapattinam', 'Nilgiris', 'Namakkal', 'Perambalur', 'Pudukkottai', 'Ramanathapuram', 'Salem', 'Sivaganga', 'Tirupur', 'Tiruchirappalli', 'Theni', 'Tirunelveli', 'Thanjavur', 'Thoothukudi', 'Tiruvallur', 'Tiruvarur', 'Tiruvannamalai', 'Vellore', 'Viluppuram', 'Virudhunagar',]
+                filldd(TN, city);
+                break
+            case 29:
+                var TR = ['Dhalai', 'North Tripura', 'South Tripura', 'Khowai', 'West Tripura',]
+                filldd(TR, city);
+                break
+            case 30:
+                var UP = ['Agra', 'Allahabad', 'Aligarh', 'Ambedkar Nagar', 'Auraiya', 'Azamgarh', 'Barabanki', 'Budaun', 'Bagpat', 'Bahraich', 'Bijnor', 'Ballia', 'Banda', 'Balrampur', 'Bareilly', 'Basti', 'Bulandshahr', 'Chandauli', 'Chhatrapati Shahuji Maharaj Nagar', 'Chitrakoot', 'Deoria', 'Etah', 'Kanshi Ram Nagar', 'Etawah', 'Firozabad', 'Farrukhabad', 'Fatehpur', 'Faizabad', 'Gautam Buddh Nagar', 'Gonda', 'Ghazipur', 'Gorakhpur', 'Ghaziabad', 'Hamirpur', 'Hardoi', 'Mahamaya Nagar', 'Jhansi', 'Jalaun', 'Jyotiba Phule Nagar', 'Jaunpur district', 'Ramabai Nagar(Kanpur Dehat)', 'Kannauj', 'Kanpur', 'Kaushambi', 'Kushinagar', 'Lalitpur', 'Lakhimpur Kheri', 'Lucknow', 'Mau', 'Meerut', 'Maharajganj', 'Mahoba', 'Mirzapur', 'Moradabad', 'Mainpuri', 'Mathura', 'Muzaffarnagar', 'Panchsheel Nagar district(Hapur)', 'Pilibhit', 'Shamli', 'Pratapgarh', 'Rampur', 'Raebareli', 'Saharanpur', 'Sitapur', 'Shahjahanpur', 'Sant Kabir Nagar', 'Siddharthnagar', 'Sonbhadra', 'Sant Ravidas Nagar', 'Sultanpur', 'Shravasti', 'Unnao', 'Varanasi',]
+                filldd(UP, city);
+                break
+            case 31:
+                var UK = ['Almora', 'Bageshwar', 'Chamoli', 'Champawat', 'Dehradun', 'Haridwar', 'Nainital', 'Pauri Garhwal', 'Pithoragarh', 'Rudraprayag', 'Tehri Garhwal', 'Udham Singh Nagar', 'Uttarkashi',]
+                filldd(UK, city);
+                break
+            case 32:
+                var WB = ['Birbhum', 'Bankura', 'Bardhaman', 'Darjeeling', 'Dakshin Dinajpur', 'Hooghly', 'Howrah', 'Jalpaiguri', 'Cooch Behar', 'Kolkata', 'Maldah', 'Paschim Medinipur', 'Purba Medinipur', 'Murshidabad', 'Nadia', 'North 24 Parganas', 'South 24 Parganas', 'Purulia', 'Uttar Dinajpur',]
+                filldd(WB, city);
+                break
+        }
+
+    }
+
+    function filldd(arr, arr2) {
+        for (var i = 0; i < arr.length; i++) {
+            var opt = document.createElement("option");
+            opt.text = arr[i];
+            arr2.add(opt);
+
+        }
+    }
+    function removedd(dd) {
+        for (var j = dd.options.length - 1; j >= 1; j--) {
+            dd.remove(j);
+        }
+    }
+
+</script>
