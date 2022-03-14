@@ -2,7 +2,7 @@
 
 <html>
     <div><input type="button" value="click" onclick="show()"></div>
-    <div id="im"></div>
+    <span id="im"></span>
     <div><select id="v"></select></div>
 </html>
 <script>
@@ -17,7 +17,7 @@
         })
         //console.log(result)
         result.map((item)=>{
-            im.innerHTML+=`<div><img src='image/${item}' width='200' ></div>`
+            im.innerHTML+=`<span><img src='image/${item}' width='200' ></span>`
         })
 
     }
